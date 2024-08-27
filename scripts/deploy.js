@@ -55,6 +55,7 @@ async function main() {
 
     const fileContents = JSON.parse(fs.readFileSync(mainPath))
     const data = {
+        ...fileContents,
         erc20: {
             [network.name]: yUSDCAddress,
             ...fileContents.erc20,
